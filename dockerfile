@@ -1,5 +1,5 @@
-FROM openjdk:17-oracle
+FROM openjdk:23-oracle
 VOLUME /tmp
 EXPOSE 8080
-ADD ./build/libs/devsecops2-0.0.1-SNAPSHOT.jar app.jar
+ADD ./build/libs/devSecOps-0.0.1-SNAPSHOT.jar app.jar
 ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]
